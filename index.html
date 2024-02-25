@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/494f05b37f.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="image/image3.png" />
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Web Designer</p>
+          <h1>Hi, I'm <span>Masud</span> <br />from Bangladesh</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------- about-------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="image/user.jpg">
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+            <p>I am a student of computer science and 
+              engineering. I am a competitive programmer
+               programmer. I work in web development.</p>
+               <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Educations</p>
+               </div>
+               <div class="tab-contents active-tab" id="skills">
+                 <ul>
+                  <li><span>Programming</span><br> Competitative programmer</li>
+                  <li><span>Wer development</span><br> Web app development</li>
+                 </ul>
+               </div> 
+               <div class="tab-contents" id="experience">
+                <ul>
+                 <li><span>Fresher</span><br> Running BSc.</li>
+                </ul>
+               </div>
+               <div class="tab-contents" id="education">
+                <ul>
+                 <li><span>SSC-2016</span><br>Balaram hat B.L high school</li>
+                 <li><span>HSC-2018</span><br>MR govt. college panchagarh</li>
+                 <li><span>BSc-(2019-2023)</span><br>Bangabandhu sheikh mujibur rahman science and technology university,gopalganj</li>
+                </ul>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+   <!-- services -->
+   <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+       <div class="services-list">
+            <div>
+              <i class="fas fa-code"></i>
+              <h2>Web Design</h2>
+              <p>Can design web with javascript framework</p>
+            </div>
+            <div>
+              <i class="fas fa-code"></i>
+              <h2>Programming Session</h2>
+              <p1>Data Structure,Algorithm,basic programming</p1>
+            </div>
+
+       </div>
+    </div>
+
+    </div>
+   </div>
+  
+   <!-- Portfolio -->
+   <div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="image/Screenshot_38.png">
+          <div class="layer">
+           <h3>Equation Solver</h3>
+           <p>Solve matrix equations</p>
+          </div>
+        </div>
+        <div class="work">
+          <img src="image/Screenshot_1.png">
+          <div class="layer">
+           <h3>Restaurent in gopalganj</h3>
+           <p>Location of restaurent</p>
+           <p>contact info of resaurent</p>
+          </div>
+        </div>
+         <div class="work">
+          <img src="image/question_bank.png">
+          <div class="layer">
+           <h3>Question bank</h3>
+           <p></p>
+          </div>
+        </div>
+        <div class="work">
+          <img src="image/online shop.png">
+          <div class="layer">
+           <h3>Online Shop</h3>
+           <p></p>
+          </div>
+        </div>
+          
+      </div>
+    </div>
+   </div>
+
+    <!-- contact -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+               <div class="sub-title">
+                <h2>Contact Me</h2>
+                <p><i class="fa-solid fa-paper-plane"></i>masud.cse2019@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>01774687690</p>
+                <div class="social-icons">
+                  <a href="https://www.facebook.com/profile.php?id=100014607099210"><i class="fa-brands fa-square-facebook"></i></a>
+                  <a href="https://www.instagram.com/masud45827/"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/masud-ali-626740204/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+               </div>
+               <a href="image/masud_cv.pdf" class="btn btn2">Download CV</a>
+          </div>
+          <div class="contact-right">
+            <form>
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+          </div>
+        </div>
+           
+      </div>
+    </div>
+
+    <script>
+      var tablinks=document.getElementsByClassName("tab-links");
+      var tabcontents=document.getElementsByClassName("tab-contents");
+       function opentab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link");
+        } 
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+       }
+
+    </script>
+    <script>
+       var sidemeu= document.getElementById("sidemenu");
+       function openmenu(){
+        sidemeu.style.right="0";
+       }
+       function closemenu(){
+        sidemeu.style.right="-200px";
+       }
+    </script>
+  </body>
+</html>
